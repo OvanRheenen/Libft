@@ -6,11 +6,10 @@
 /*   By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/07 19:19:53 by ovan-rhe      #+#    #+#                 */
-/*   Updated: 2023/03/29 16:23:18 by ovan-rhe      ########   odam.nl         */
+/*   Updated: 2023/04/03 16:15:03 by ovan-rhe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
 #include "libft.h"
 
 int	newline_checker(char *str)

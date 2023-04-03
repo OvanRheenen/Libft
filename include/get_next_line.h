@@ -6,7 +6,7 @@
 /*   By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 13:04:00 by ovan-rhe      #+#    #+#                 */
-/*   Updated: 2023/03/29 16:17:12 by ovan-rhe      ########   odam.nl         */
+/*   Updated: 2023/04/03 16:20:42 by ovan-rhe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,20 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <limits.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
 
-char	*get_next_line(int fd);
-char	*read_to_stash(int fd, char *stash);
-char	*stash_to_line(char *stash);
-char	*next_call_stash(char *stash);
+char		*get_next_line(int fd);
+static char	*read_to_stash(int fd, char *stash);
+static char	*stash_to_line(char *stash);
+static char	*next_call_stash(char *stash);
 
-char	*ft_strjoinfree(char *s1, char *s2);
-int		newline_checker(char *str);
-char	*copy_stash_to_line(char *str, char *stash);
-int		return_line_len(char *stash);
+char		*ft_strjoinfree(char *s1, char *s2);
+int			newline_checker(char *str);
+char		*copy_stash_to_line(char *str, char *stash);
+int			return_line_len(char *stash);
 
 #endif
