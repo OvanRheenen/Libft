@@ -6,7 +6,7 @@
 /*   By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 13:04:00 by ovan-rhe      #+#    #+#                 */
-/*   Updated: 2023/04/03 16:50:57 by ovan-rhe      ########   odam.nl         */
+/*   Updated: 2023/04/03 16:51:44 by ovan-rhe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <limits.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 69
+#  define BUFFER_SIZE 42
 # endif
 
 char	*get_next_line(int fd);
