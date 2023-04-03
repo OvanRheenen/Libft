@@ -6,7 +6,7 @@
 /*   By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/03/22 16:30:25 by ovan-rhe      #+#    #+#                 */
-/*   Updated: 2023/03/27 16:02:06 by ovan-rhe      ########   odam.nl         */
+/*   Updated: 2023/04/03 14:23:53 by ovan-rhe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int	ft_atoi_safe(const char *str, int *nbr)
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		if (!ft_isdigit(str[i]))
+			return (0);
 		num = (num * 10) + (str[i] - '0');
 		if ((num > 2147483647 && posneg == 1) \
 		|| (num > 2147483648 && posneg == -1))
