@@ -6,7 +6,7 @@
 /*   By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/07 17:42:49 by ovan-rhe      #+#    #+#                 */
-/*   Updated: 2023/04/03 16:20:06 by ovan-rhe      ########   odam.nl         */
+/*   Updated: 2023/04/03 16:25:03 by ovan-rhe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-static char	*read_to_stash(int fd, char *stash)
+char	*read_to_stash(int fd, char *stash)
 {
 	int		bytes_read;
 	char	*buf;
@@ -63,7 +63,7 @@ static char	*read_to_stash(int fd, char *stash)
 	return (stash);
 }
 
-static char	*stash_to_line(char *stash)
+char	*stash_to_line(char *stash)
 {
 	char	*str;
 	int		line_len;
@@ -78,7 +78,7 @@ static char	*stash_to_line(char *stash)
 	return (str);
 }
 
-static char	*next_call_stash(char *stash)
+char	*next_call_stash(char *stash)
 {
 	char	*str;
 	int		start;
