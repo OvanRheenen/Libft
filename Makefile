@@ -6,7 +6,7 @@
 #    By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 13:32:03 by ovan-rhe      #+#    #+#                  #
-#    Updated: 2023/04/03 16:18:49 by ovan-rhe      ########   odam.nl          #
+#    Updated: 2023/04/04 13:25:55 by ovan-rhe      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,8 @@ SRC_FILES =	free_double_array.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
-			ft_lstmap.c
+			ft_lstmap.c \
+			ft_word_counter.c
 
 SRC 	= $(addprefix src/, $(SRC_FILES))
 OBJS 	= $(SRC:.c=.o)
