@@ -6,7 +6,7 @@
 #    By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 13:32:03 by ovan-rhe      #+#    #+#                  #
-#    Updated: 2023/04/04 13:25:55 by ovan-rhe      ########   odam.nl          #
+#    Updated: 2023/04/05 14:56:33 by ovan-rhe      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,7 @@ YELLOW	= \033[33;1m
 BLUE	= \033[34;1m
 MAGENTA	= \033[35;1m
 CYAN	= \033[36;1m
-WHITE	= \033[37;1m
+WHITE	= \033[37;0m
 RESET	= \033[0m
 
 all: $(NAME)

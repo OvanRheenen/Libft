@@ -6,13 +6,12 @@
 /*   By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 14:56:53 by ovan-rhe      #+#    #+#                 */
-/*   Updated: 2023/04/04 13:33:36 by ovan-rhe      ########   odam.nl         */
+/*   Updated: 2023/04/05 15:53:35 by ovan-rhe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// static size_t	word_counter(char const *s, char c);
 static int		insert_word(char const *s, char c, char **str, size_t w_count);
 
 char	**ft_split(char const *s, char c)
@@ -31,27 +30,6 @@ char	**ft_split(char const *s, char c)
 	}
 	return (str_array);
 }
-
-// static size_t	word_counter(char const *s, char c)
-// {
-// 	size_t	count;
-// 	size_t	i;
-
-// 	count = 0;
-// 	i = 0;
-// 	while (s[i])
-// 	{
-// 		if (s[i] != c)
-// 		{
-// 			count++;
-// 			while (s[i] != c && s[i])
-// 				i++;
-// 		}
-// 		else
-// 			i++;
-// 	}
-// 	return (count);
-// }
 
 static int	insert_word(char const *s, char c, char **str, size_t w_count)
 {
