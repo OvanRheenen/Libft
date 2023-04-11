@@ -6,7 +6,7 @@
 /*   By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:18:37 by ovan-rhe      #+#    #+#                 */
-/*   Updated: 2023/04/04 13:27:50 by ovan-rhe      ########   odam.nl         */
+/*   Updated: 2023/04/11 14:21:53 by ovan-rhe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-size_t	ft_word_counter(char const *s, char c);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
