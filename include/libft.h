@@ -6,7 +6,7 @@
 /*   By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 14:18:37 by ovan-rhe      #+#    #+#                 */
-/*   Updated: 2023/04/11 14:21:53 by ovan-rhe      ########   odam.nl         */
+/*   Updated: 2023/04/24 17:34:23 by ovan-rhe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ typedef struct s_list
 }					t_list;
 
 void	free_double_array(char **d_arr);
+
+int		ft_abs(int i);
 
 int		ft_atoi(const char *str);
 long	ft_atol(const char *str);

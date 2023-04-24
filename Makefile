@@ -6,13 +6,14 @@
 #    By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 13:32:03 by ovan-rhe      #+#    #+#                  #
-#    Updated: 2023/04/11 14:22:01 by ovan-rhe      ########   odam.nl          #
+#    Updated: 2023/04/24 17:33:51 by ovan-rhe      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= libft.a
 
 SRC_FILES =	free_double_array.c \
+			ft_abs.c \
 			ft_atoi_safe.c \
 			ft_atoi.c \
 			ft_atol.c \
