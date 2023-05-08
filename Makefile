@@ -6,7 +6,7 @@
 #    By: ovan-rhe <ovan-rhe@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/06 13:32:03 by ovan-rhe      #+#    #+#                  #
-#    Updated: 2023/04/24 17:33:51 by ovan-rhe      ########   odam.nl          #
+#    Updated: 2023/05/08 16:58:24 by ovan-rhe      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC_FILES =	free_double_array.c \
 			ft_atol.c \
 			ft_bzero.c \
 			ft_calloc.c \
+			ft_error.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
