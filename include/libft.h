@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include "get_next_line.h"
 # include "ft_printf.h"
 
 typedef struct s_list
@@ -25,10 +24,9 @@ typedef struct s_list
 }					t_list;
 
 void	free_double_array(char **d_arr);
-
 int		ft_abs(int i);
-
 void	ft_error(int errnum, const char *error_msg);
+char	*get_next_line(int fd);
 
 int		ft_atoi(const char *str);
 long	ft_atol(const char *str);
