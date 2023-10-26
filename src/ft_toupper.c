@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @brief Converts a lowercase letter to uppercase
+ * @param c The character to convert
+ * @return The uppercase character
+ */
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')

@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/**
+ * @brief Appends the NUL-terminated string src to the end of dst. It will
+ *        append at most size - strlen(dst) - 1 bytes, NUL-terminating the
+ *        result.
+ * @param dst The destination string
+ * @param src The source string
+ * @param dstsize The size of the destination string
+ * @return The total length of the string they tried to create
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

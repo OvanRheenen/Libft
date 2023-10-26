@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @brief Checks if the character is alphanumeric
+ * @param c The character to check
+ * @return 1 if the character is alphanumeric, 0 if not
+ */
 int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')

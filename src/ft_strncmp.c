@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Compares two strings
+ * @param s1 The first string to compare
+ * @param s2 The second string to compare
+ * @param n The number of characters to compare
+ * @return The difference between the first two differing characters
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t			i;

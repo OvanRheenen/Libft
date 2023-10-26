@@ -12,30 +12,13 @@
 
 #include "libft.h"
 
-char	*get_next_line(int fd)
-{
-	static char	*stash[OPEN_MAX];
-	char		*line;
-
-	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (NULL);
-	stash[fd] = read_to_stash(fd, stash[fd]);
-	if (!stash[fd])
-		return (NULL);
-	line = stash_to_line(stash[fd]);
-	if (!line)
-	{
-		free(stash[fd]);
-		stash[fd] = NULL;
-		return (NULL);
-	}
-	stash[fd] = next_call_stash(stash[fd]);
-	if (!stash[fd])
-		return (NULL);
-	return (line);
-}
-
-char	*read_to_stash(int fd, char *stash)
+/**
+ * @brief Reads from a file descriptor and stores the read data in a stash
+ * @param fd The file descriptor to read from
+ * @param stash The stash to store the read data in
+ * @return The stash with the read data. NULL if the allocation fails
+ */
+static char	*read_to_stash(int fd, char *stash)
 {
 	int		bytes_read;
 	char	*buf;
@@ -63,7 +46,12 @@ char	*read_to_stash(int fd, char *stash)
 	return (stash);
 }
 
-char	*stash_to_line(char *stash)
+/**
+ * @brief Copies the data from the stash to a line
+ * @param stash The stash to copy from
+ * @return The line with the copied data. NULL if the allocation fails
+ */
+static char	*stash_to_line(char *stash)
 {
 	char	*str;
 	int		line_len;
@@ -78,7 +66,12 @@ char	*stash_to_line(char *stash)
 	return (str);
 }
 
-char	*next_call_stash(char *stash)
+/**
+ * @brief Copies the data from the stash to a line
+ * @param stash The stash to copy from
+ * @return The line with the copied data. NULL if the allocation fails
+ */
+static char	*next_call_stash(char *stash)
 {
 	char	*str;
 	int		start;
@@ -103,4 +96,32 @@ char	*next_call_stash(char *stash)
 	str[i] = '\0';
 	free(stash);
 	return (str);
+}
+
+/**
+ * @brief Reads a line from a file descriptor
+ * @param fd The file descriptor to read from
+ * @return The line that was read. NULL if the allocation fails
+ */
+char	*get_next_line(int fd)
+{
+	static char	*stash[OPEN_MAX];
+	char		*line;
+
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	stash[fd] = read_to_stash(fd, stash[fd]);
+	if (!stash[fd])
+		return (NULL);
+	line = stash_to_line(stash[fd]);
+	if (!line)
+	{
+		free(stash[fd]);
+		stash[fd] = NULL;
+		return (NULL);
+	}
+	stash[fd] = next_call_stash(stash[fd]);
+	if (!stash[fd])
+		return (NULL);
+	return (line);
 }

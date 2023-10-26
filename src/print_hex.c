@@ -12,6 +12,12 @@
 
 #include "ft_printf.h"
 
+/**
+ * @brief Prints a hexadecimal number
+ * @param hex The hexadecimal number to print
+ * @param x The type of hexadecimal number to print
+ * @return The number of characters printed
+ */
 int	print_hex(unsigned long long hex, char x)
 {
 	int	count;

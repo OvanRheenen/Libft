@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Copies a string to a byte string
+ * @param dst The byte string to copy to
+ * @param src The string to copy
+ * @param dstsize The size of the byte string
+ * @return The length of the string
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

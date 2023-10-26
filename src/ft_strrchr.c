@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Locates the last occurrence of c in the string pointed to by s
+ * @param s The string to search
+ * @param c The character to search for
+ * @return A pointer to the located character, 
+ * or NULL if the character does not appear in the string
+ */
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t		i;

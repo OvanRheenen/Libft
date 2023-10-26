@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/**
+ * @brief Locates the first occurrence of c (converted to a char) in the string
+ * pointed to by s. The terminating null character is considered to be part of
+ * the string; therefore if c is `\0', the functions locate the terminating `\0'.
+ * @param s The string to search
+ * @param c The character to search for
+ * @return A pointer to the located character, or NULL if the character does not
+ * appear in the string
+ */
 char	*ft_strchr(char *s, int c)
 {
 	size_t	i;
@@ -26,5 +35,5 @@ char	*ft_strchr(char *s, int c)
 		else
 			i++;
 	}
-	return (0);
+	return (NULL);
 }

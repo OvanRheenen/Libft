@@ -12,15 +12,18 @@
 
 #include "ft_printf.h"
 
+/**
+ * @brief Prints a string
+ * @param s The string to print
+ * @return The number of characters printed
+ */
 int	ft_printstr(char *s)
 {
 	int	i;
 
 	i = 0;
 	if (s == NULL)
-	{
 		return (ft_printstr("(null)"));
-	}
 	while (s[i])
 	{
 		write(1, &s[i], 1);

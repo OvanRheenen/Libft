@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/**
+ * @brief Frees a double array
+ * @param d_arr The double array to free
+ */
 void	free_double_array(char **d_arr)
 {
 	size_t	i;

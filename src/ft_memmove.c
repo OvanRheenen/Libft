@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * @brief Copies 'len' bytes from string 'src' to string 'dst'. The two strings
+ * may overlap; the copy is always done in a non-destructive manner.
+ * @param dst The destination string
+ * @param src The source string
+ * @param len The number of bytes to copy
+ * @return A pointer to the destination string
+ */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*s;
@@ -26,9 +34,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst > src)
 	{
 		while (len-- > 0)
-		{
 			d[len] = s[len];
-		}
 	}
 	else
 	{

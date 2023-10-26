@@ -12,6 +12,39 @@
 
 #include "ft_printf.h"
 
+/**
+ * @brief Prints a formatted string to stdout
+ * @param s The string to print
+ * @param ap The argument list
+ * @return The number of characters printed
+ */
+static int	print_argument(const char *s, int i, va_list ap)
+{
+	if (s[i] == 'c')
+		ft_printchar(va_arg(ap, int));
+	else if (s[i] == 's')
+		return (ft_printstr(va_arg(ap, char *)));
+	else if (s[i] == 'p')
+		return (ft_printstr("0x")
+			+ print_hex(va_arg(ap, unsigned long long), 'x'));
+	else if (s[i] == 'd')
+		return (ft_printnbr(va_arg(ap, int)));
+	else if (s[i] == 'i')
+		return (ft_printnbr(va_arg(ap, int)));
+	else if (s[i] == 'u')
+		return (ft_printnbr(va_arg(ap, unsigned int)));
+	else if (s[i] == 'x' || s[i] == 'X')
+		return (print_hex(va_arg(ap, unsigned int), s[i]));
+	else if (s[i] == '%')
+		ft_printchar(s[i]);
+	return (1);
+}
+
+/**
+ * @brief Prints a formatted string to stdout
+ * @param s The string to print
+ * @return The number of characters printed
+ */
 int	ft_printf(const char *s, ...)
 {
 	int		i;
@@ -37,26 +70,4 @@ int	ft_printf(const char *s, ...)
 	}
 	va_end(ap);
 	return (printed_count);
-}
-
-int	print_argument(const char *s, int i, va_list ap)
-{
-	if (s[i] == 'c')
-		ft_printchar(va_arg(ap, int));
-	else if (s[i] == 's')
-		return (ft_printstr(va_arg(ap, char *)));
-	else if (s[i] == 'p')
-		return (ft_printstr("0x")
-			+ print_hex(va_arg(ap, unsigned long long), 'x'));
-	else if (s[i] == 'd')
-		return (ft_printnbr(va_arg(ap, int)));
-	else if (s[i] == 'i')
-		return (ft_printnbr(va_arg(ap, int)));
-	else if (s[i] == 'u')
-		return (ft_printnbr(va_arg(ap, unsigned int)));
-	else if (s[i] == 'x' || s[i] == 'X')
-		return (print_hex(va_arg(ap, unsigned int), s[i]));
-	else if (s[i] == '%')
-		ft_printchar(s[i]);
-	return (1);
 }

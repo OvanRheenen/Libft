@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/**
+ * @brief Converts a string to an integer
+ * @param str The string to convert
+ * @param nbr The integer to store the result in
+ * @return 1 if the conversion was successful, 0 if not
+ */
 int	ft_atoi_safe(const char *str, int *nbr)
 {
 	int		i;

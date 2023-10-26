@@ -17,7 +17,6 @@
 # include <stdarg.h>
 
 int		ft_printf(const char *s, ...);
-int		print_argument(const char *s, int i, va_list ap);
 int		ft_printnbr(long int n);
 void	ft_printchar(char c);
 int		ft_printstr(char *s);

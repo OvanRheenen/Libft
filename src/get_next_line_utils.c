@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Allocates (with malloc(3)) and returns a new string, which is the
+ * result of the concatenation of ’s1’ and ’s2’.
+ * @param s1 The prefix string
+ * @param s2 The suffix string
+ * @return The new string. NULL if the allocation fails
+ */
 int	newline_checker(char *str)
 {
 	int	i;
@@ -26,6 +33,13 @@ int	newline_checker(char *str)
 	return (-1);
 }
 
+/**
+ * @brief Allocates (with malloc(3)) and returns a new string, which is the
+ * result of the concatenation of ’s1’ and ’s2’.
+ * @param s1 The prefix string
+ * @param s2 The suffix string
+ * @return The new string. NULL if the allocation fails
+ */
 char	*copy_stash_to_line(char *str, char *stash)
 {
 	int	i;
@@ -45,6 +59,11 @@ char	*copy_stash_to_line(char *str, char *stash)
 	return (str);
 }
 
+/**
+ * @brief Counts the number of characters in a string until a newline or null
+ * @param stash The string to count
+ * @return The number of characters in the string
+ */
 int	return_line_len(char *stash)
 {
 	int	i;

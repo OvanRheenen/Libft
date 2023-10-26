@@ -12,6 +12,11 @@
 
 #include "ft_printf.h"
 
+/**
+ * @brief Prints a number
+ * @param n The number to print
+ * @return The number of characters printed
+ */
 int	ft_printnbr(long int n)
 {
 	int	count;

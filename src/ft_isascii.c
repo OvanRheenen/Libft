@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @brief Checks if the character is ASCII
+ * @param c The character to check
+ * @return 1 if the character is ASCII, 0 if not
+ */
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

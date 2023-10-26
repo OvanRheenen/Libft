@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * @brief Allocates sufficient memory for a copy of the string s1, does the copy,
+ * and returns a pointer to it. The pointer may subsequently be used as an
+ * argument to the function free(3). If insufficient memory is available, NULL
+ * is returned and errno is set to ENOMEM.
+ * @param s1 The string to duplicate
+ * @return The pointer to the new string
+ */
 char	*ft_strdup(const char *s1)
 {
 	size_t	strlen;

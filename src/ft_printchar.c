@@ -12,6 +12,10 @@
 
 #include "ft_printf.h"
 
+/**
+ * @brief Prints a character
+ * @param c The character to print
+ */
 void	ft_printchar(char c)
 {
 	write(1, &c, 1);

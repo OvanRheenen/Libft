@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/**
+ * @brief Prints an error message to stderr and exits the program
+ * @param errnum The error number
+ * @param error_msg The error message to print
+ */
 void	ft_error(int errnum, const char *error_msg)
 {
 	ft_printf("\033[31;1merror: \033[0m");

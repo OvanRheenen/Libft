@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * @brief Allocates (with malloc(3)) and returns a copy of ’s1’ with the
+ * characters specified in ’set’ removed from the beginning and the end of the
+ * string.
+ * @param s1 The string to be trimmed
+ * @param set The reference set of characters to trim
+ * @return The trimmed string. NULL if the allocation fails.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str_result;
@@ -28,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	str_result = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (str_result == 0)
-		return (0);
+		return (NULL);
 	ft_strlcpy(str_result, s1 + start, end - start + 1);
 	return (str_result);
 }

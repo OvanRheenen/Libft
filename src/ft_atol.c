@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/**
+ * @brief Converts a string to a long integer
+ * @param str The string to convert
+ * @return The converted long integer
+ */
 long	ft_atol(const char *str)
 {
 	int		i;
